@@ -20,12 +20,3 @@ functions:
       - httpApi:
           path: /execute
           method: get
-```
-
-## Step 6: Create .gitignore
-```
-node_modules/
-.serverless/
-.env
-*.log
-.DS_Store
