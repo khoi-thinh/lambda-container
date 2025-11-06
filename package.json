@@ -1,0 +1,14 @@
+{
+  "name": "large-lambda-test",
+  "version": "1.0.0",
+  "description": "Large Lambda function with container image",
+  "main": "handler.js",
+  "dependencies": {
+    "@tensorflow/tfjs-node": "^4.11.0",
+    "sharp": "^0.32.6",
+    "canvas": "^2.11.2"
+  },
+  "devDependencies": {
+    "serverless": "3.38.0"
+  }
+}

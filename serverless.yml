@@ -1,0 +1,31 @@
+service: large-lambda-test
+
+provider:
+  name: aws
+  region: us-east-1
+  ecr:
+    images:
+      largeimage:
+        path: ./
+        file: Dockerfile
+
+functions:
+  largeFunction:
+    image:
+      name: largeimage
+    memorySize: 3008
+    timeout: 900
+    ephemeralStorageSize: 10240
+    events:
+      - httpApi:
+          path: /execute
+          method: get
+```
+
+## Step 6: Create .gitignore
+```
+node_modules/
+.serverless/
+.env
+*.log
+.DS_Store
